@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  version: '0.1'
+  contact:
+    name: Michael Scarpace
+    email: mikescarpace@yahoo.com
+  title: Tips
+  description: 'When typing in the name of the restaurant that you are interested in use spaces, for example, the city beer hall.  Do not use underscores, dashes...etc.  The locale can include examples like,  "New York City", "NYC", "350 5th Ave, New York, NY 10118".  Also, Levenshtein algorithim is used to match the name you typed against Yelp databases so it is possible that you get a different restaurant than you intended. '
+servers:
+  - url: http://localhost:8080
+paths:
+  /yelp-reviews:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: name
+          in: query
+          schema:
+            type: string
+          example: the%20city%20beer%20hall
+        - name: locale
+          in: query
+          schema:
+            type: string
+          example: albany%20ny
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            text/plain;charset=UTF-8:
+              schema:
+                type: string
+              examples: {}
+      servers:
+        - url: http://localhost:8080
+    servers:
+      - url: http://localhost:8080
