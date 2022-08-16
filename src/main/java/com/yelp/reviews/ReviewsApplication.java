@@ -26,7 +26,7 @@ public class ReviewsApplication {
 	}
 
 	@Bean
-	public RestTemplate collectCentRestTemplate(RestTemplateBuilder builder) {
+	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder.rootUri(yelpBaseUrl)
 				.additionalInterceptors((ClientHttpRequestInterceptor) (request, body, execution) -> {
 					request.getHeaders()

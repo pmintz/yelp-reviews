@@ -20,7 +20,7 @@ public class YelpService {
 
     /**
      * The method will first call https://api.yelp.com/v3/businesses/search to determine that
-     * the business had been found and the retrieve it's ID which will be used in a subsequent
+     * the business had been found and then retrieve it's ID which will be used in a subsequent
      * call to https://api.yelp.com/v3/businesses/{id}/reviews to retrieve the reviews for
      * that particular business
      *
